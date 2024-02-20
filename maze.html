@@ -3,17 +3,19 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>MAntonic Raycaster</title>
+    <title>MAntonic Maze</title>
+    
   </head>
   <body>  
-    <h1>Raycaster made using C and SDL compiled to WebAssembly using emscripten </h1>
-    <a href="https://github.com/mantonic002/raycaster"><h3>Github Repo</h3></a>
-    <h3>Click <a href="maze.html">here </a>to try out a maze game build on top of this project</h3>
+    <h1>Raycaster Maze game made using C and SDL compiled to WebAssembly using emscripten </h1>
+    <a href="https://github.com/mantonic002/raycaster/tree/maze"><h3>Github Repo</h3></a>
+    <h3>Click <a href="index.html">here </a>to go back to the root project</h3>
+
     <h2>For now game only supports following controlls:</h2>
     <ul>
       
       <li><h3>W, A, S, D keys for moving around</h3></li>
-      <li><h3>E key opens doors</h3></li>
+      <li><h3>F switching between first-person view and top-down view</h3></li>
   
     </ul>
     <canvas id="canvas" oncontextmenu="event.preventDefault()"></canvas>
@@ -24,6 +26,6 @@
             canvas: (function() { return document.getElementById('canvas'); })()
         };
     </script>
-    <script src="ray.js"></script>
+    <script src="game.js"></script>
 </body>
 </html>
