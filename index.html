@@ -1,29 +1,119 @@
-<!doctype html>
-<html lang="en-us">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>MAntonic Raycaster</title>
-  </head>
-  <body>  
-    <h1>Raycaster made using C and SDL compiled to WebAssembly using emscripten </h1>
-    <a href="https://github.com/mantonic002/raycaster"><h3>Github Repo</h3></a>
-    <h3>Click <a href="maze.html">here </a>to try out a maze game build on top of this project</h3>
-    <h2>For now game only supports following controlls:</h2>
-    <ul>
-      
-      <li><h3>W, A, S, D keys for moving around</h3></li>
-      <li><h3>E key opens doors</h3></li>
-  
-    </ul>
-    <canvas id="canvas" oncontextmenu="event.preventDefault()"></canvas>
-    <br>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marko Antonić - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <script type="text/javascript">
-        var Module = {
-            canvas: (function() { return document.getElementById('canvas'); })()
-        };
-    </script>
-    <script src="ray.js"></script>
+    <section id="about">
+        <div class="img-container">
+            <img src="me.jpg" alt="Marko Antonić">
+        </div>
+
+        </div>
+
+        <div>
+            <h2>Marko Antonić</h2>
+            <p>
+                Hey! I'm Marko, an undergraduate with a focus on software engineering. Even though I'm still new to the field, I've got a serious passion for tech and love diving into all kinds of projects. 
+            </p>
+            <p>
+                My main interests are in low-level and graphics programming. <br>There's just something so fascinating about getting into the details and seeing how everything works under the hood.
+            </p>
+            <p>
+                When I'm not coding, you can usually find me out mountain biking, jamming on my guitar, or playing video games.
+            </p>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+
+        <a href="dx11.html" class="project-link">
+            <div class="project">
+                <div class="img-container">
+                    <img src="dx11.png" alt="dx11 engine">
+                </div>
+                <div>
+                    <h3>DirectX11 Engine</h3>
+                    <p>
+                        Currently under development, this 3D rendering engine features a range of lighting techniques, 
+                        versatile mesh loading capabilities, and dynamic vertex management.
+                        It's designed to provide a solid foundation for my future game development projects.
+                    </p>
+                </div>
+            </div>
+        </a>
+
+        <a href="3d-renderer.html" class="project-link">
+            <div class="project">
+                <div class="img-container">
+                    <img src="3d-renderer.png" alt="3D Renderer">
+                </div>
+                <div>
+                    <h3>3D Renderer</h3>
+                    <p>
+                        This simple 3D rendering engine, crafted in C, serves as my hands-on introduction to the basics of 3D rendering. 
+                        It incorporates dynamic lighting, texture mapping, and loading .obj files. 
+                        I used SDL2 for texture handling and pixel rendering.
+                    </p>
+                </div>
+            </div>
+        </a>
+
+        <a href="raycaster.html" class="project-link">
+            <div class="project" href="raycaster.html">
+                <div class="img-container">
+                    <img src="raycaster.png" alt="RetroRays">
+                </div>
+                <div>
+                    <h3>RetroRays</h3>
+                    <p>
+                        A pseudo-3D game inspired by Wolfenstein 3D, developed from scratch using C, using raycasting techniques for rendering. <br><br>
+                        Using SDL2 for input/output management.
+                    </p>
+                    <span>Click anywhere to try it (compiled as WebAssembly)</span> <br>
+                </div>
+            </div>
+        </a>
+
+        <div class="project-nh">
+            <div>
+                <h3>Airbnb-Mockup</h3>
+                <p>
+                    Service-oriented accommodation booking platform developed with Golang. Orchestrated database infrastructure using Cassandra, MongoDB, Consul, and Docker.
+                </p>
+                <a href="https://github.com/mantonic002/AirBNB-mockup">GitHub repository</a>
+            </div>
+        </div>
+
+        <div class="project-nh">
+            <div>
+                <h3>SocialSphere</h3>
+                <p>
+                    Full-stack Reddit-like social platform, built with Spring Boot for the back end and Angular for the front end.
+                </p>
+                <a href="https://github.com/mantonic002/svt2023">Back end repository</a>
+            </div>
+        </div>
+    </section>
+    <footer id="contact">
+        <h2>Contact & Socials</h2>
+        <p>Email: <a href="mailto:mantonic002@gmail.com">mantonic002@gmail.com</a> | Phone: (+381) 0637820033</p>
+        <p><a href="https://www.linkedin.com/in/mantonic/">LinkedIn</a> | <a href="https://github.com/mantonic002">GitHub</a></p>
+    </footer>
 </body>
 </html>

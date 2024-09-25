@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAntonic Raycaster</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about-proj">
+        <div>
+            <h2>Raycaster</h2>
+            <p class="warning">Doesn't work on mobile devices</p>
+            <p>Raycaster made using C and SDL compiled to WebAssembly using Emscripten</p>
+            <a href="https://github.com/mantonic002/raycaster">GitHub Repo</a>
+            <p>Click <a href="maze.html">here</a> to try out a maze game built on top of this project</p>
+        </div>
+    </section>
+
+    <section id="projects">
+      <div class="project-nh">
+        <canvas id="canvas" oncontextmenu="event.preventDefault()"></canvas>
+        <div>
+          <h4>Game Controls:</h4>
+          <p>W, A, S, D keys for moving around</p>
+          <p>E key opens doors</p>
+        </div>
+      </div>
+    </section>
+
+    <footer id="contact">
+        <h2>Contact & Socials</h2>
+        <p>Email: <a href="mailto:mantonic002@gmail.com">mantonic002@gmail.com</a> | Phone: (+381) 0637820033</p>
+        <p><a href="https://www.linkedin.com/in/mantonic/">LinkedIn</a> | <a href="https://github.com/mantonic002">GitHub</a></p>
+    </footer>
+
+    <script type="text/javascript">
+        var Module = {
+            canvas: (function() { return document.getElementById('canvas'); })()
+        };
+    </script>
+    <script src="ray.js"></script>
+</body>
+</html>

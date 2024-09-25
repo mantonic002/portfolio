@@ -1,0 +1,314 @@
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Press Start 2P', cursive; /* 8-bit styled font */
+}
+
+body {
+    background: #1e1e1e;
+    color: #f4f4f4;
+    font-size: 16px;
+    line-height: 1.6;
+    padding: 0 10%;
+
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    background-color: #141414;
+    border-bottom: 4px solid #ffcc00;
+}
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #141414;
+    padding: 1rem;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem; /* Adjust space between the menu items */
+}
+
+.navbar ul li {
+    display: inline;
+}
+
+.navbar ul li a {
+    color: #f4f4f4;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #ffcc00; /* Change color on hover */
+}
+
+
+#about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background: #333;
+    color: #ffcc00;
+}
+
+#about-proj {
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    text-align: left;
+    align-items: left;
+    padding: 2rem;
+    background: #333;
+    color: #ffcc00;
+}
+
+.img-container {
+    position: relative;
+    display: inline-block;
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.8);
+}
+
+.img-container video {
+    width: 360px;
+    height: auto;
+    border: 10px solid #5a5a5a;
+    margin-right: 0;
+    filter: grayscale(30%) contrast(120%) brightness(100%) saturate(120%);
+    transition: all 0.2s ease-in-out;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    color: #ff00ff;
+    cursor: pointer;
+    z-index: 2;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.play-button:hover {
+    opacity: 1;
+}
+
+.img-container img {
+    width:250px;
+    height: auto;
+    border: 10px solid #5a5a5a;
+    margin-right: 0rem; 
+    filter: grayscale(30%) contrast(120%) brightness(100%) saturate(120%);
+    transition: all 0.2s ease-in-out;
+}
+
+#about .img-container img {
+    width:400px;
+}
+
+/* Adding scan lines */
+.img-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.2) 50%, transparent 100%);
+    background-size: 100% 4px;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 1;
+}
+
+#about div
+{
+    max-width: 600px;
+}
+
+#about h2, #about-proj h2 {
+    font-size: 2.5rem;
+    color: #00ffff;
+    margin: 0 1.5rem;
+
+}
+
+#about p, 
+#about-proj p {
+    font-size: 1rem;
+    margin: 1.5rem 1.5rem;
+}
+
+#about a, 
+#about-proj a {
+    font-size: 1rem;
+    margin: 1.5rem 1.5rem;
+}
+
+a {
+    color: #00ff00;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.warning {
+    color: #ff0000;
+    text-decoration: underline;
+    font-size: 0.9rem;
+}
+
+/* Projects Section */
+#projects {
+    margin-top: 5rem;
+}
+
+.project, .project-nh {
+    display: flex;
+    align-items: center;
+    background: #444;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border: 4px solid #ff00ff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+.project a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+}
+
+.project:hover {
+    transform: translateY(-10px);
+}
+
+.project .img-container, 
+.project-nh video, 
+.project-nh .img-container, 
+.project-nh canvas {
+    margin-right: 2rem;
+}
+
+.project h3,
+.project-nh h3,
+.project-nh h3 a,
+.project h3 a {
+    font-size: 1.5rem;
+    color: #00ffff;
+}
+
+.project p, .project-nh p {
+    margin: 1rem 0;
+    color: #ffcc00;
+}
+
+/* Footer */
+footer {
+    background: #141414;
+    padding: 1.5rem;
+    text-align: center;
+    color: #f4f4f4;
+}
+
+footer a {
+    color: #00ff00;
+    text-decoration: none;
+}
+
+footer h2 {
+    color: #00ffff;
+    margin-bottom: 1rem;
+}
+
+/* Responsive: Stack image and text vertically on small screens */
+@media only screen and (max-width: 1310px) {
+    #about {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #about .img-container {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    .project {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .project .img-container {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+}
+
+/* 8-bit Animation */
+@keyframes glow {
+    /* 0% { text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 20px #ff00ff, 0 0 30px #ff00ff; } */
+    50% { text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff }
+    /* 100% { text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 20px #ff00ff, 0 0 30px #ff00ff; } */
+}
+
+h2, h3 {
+    animation: glow 2s infinite alternate;
+}
+
+/* Flicker effect on hover */
+.project .img-container img:hover, #about .img-container img:hover {
+    filter: grayscale(20%) contrast(120%) brightness(90%) saturate(100%);
+    animation: flicker 0.2s infinite alternate;
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.8);
+}
+
+/* Flicker animation */
+@keyframes flicker {
+    0% { opacity: 1; 
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+    }
+    50% { opacity: 0.9; 
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    }
+    100% { opacity: 1; 
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+    }
+}
+
+/* .img-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        to bottom,
+        rgba(0, 255, 0, 0.05),
+        rgba(0, 255, 0, 0.05) 1px,
+        transparent 6px
+    );
+    z-index: 2;
+    pointer-events: none;
+    opacity: 6.65; /* Subtle distortion */
+/* } */

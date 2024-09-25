@@ -1,26 +1,49 @@
 <!doctype html>
 <html lang="en-us">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MAntonic Maze</title>
-    
-  </head>
-  <body>  
-    <h1>Raycaster Maze game made using C and SDL compiled to WebAssembly using emscripten </h1>
-    <a href="https://github.com/mantonic002/raycaster/tree/maze"><h3>Github Repo</h3></a>
-    <h3>Click <a href="index.html">here </a>to go back to the root project</h3>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+        </nav>
+    </header>
 
-    <h2>For now game only supports following controlls:</h2>
-    <ul>
-      
-      <li><h3>W, A, S, D keys for moving around</h3></li>
-      <li><h3>F switching between first-person view and top-down view</h3></li>
-  
-    </ul>
-    <h3>Goal: Reach the bottom right corner!!!</h3>
-    <canvas id="canvas" oncontextmenu="event.preventDefault()"></canvas>
-    <br>
+    <section id="about-proj">
+        <div>
+            <h2>Raycaster Maze</h2>
+            <p class="warning">Doesn't work on mobile devices</p>
+            <p>Raycaster Maze game made using C and SDL compiled to WebAssembly using Emscripten</p>
+            <a href="https://github.com/mantonic002/raycaster/tree/maze">GitHub Repo</a>
+            <p>Click <a href="raycaster.html">here</a> to go back to the root project</p>
+        </div>
+    </section>
+
+    <section id="projects">
+      <div class="project-nh">
+        <canvas id="canvas" oncontextmenu="event.preventDefault()"></canvas>
+        <div>
+          <h4>Game Controls:</h4>
+          <p>W, A, S, D keys for moving around</p>
+          <p>F switches between first-person view and top-down view</p>
+          <p>Goal: Reach the bottom right corner!!!</p>
+        </div>
+      </div>
+    </section>
+      <footer id="contact">
+        <h2>Contact & Socials</h2>
+        <p>Email: <a href="mailto:mantonic002@gmail.com">mantonic002@gmail.com</a> | Phone: (+381) 0637820033</p>
+        <p><a href="https://www.linkedin.com/in/mantonic/">LinkedIn</a> | <a href="https://github.com/mantonic002">GitHub</a></p>
+      </footer>
 
     <script type="text/javascript">
         var Module = {
@@ -28,5 +51,6 @@
         };
     </script>
     <script src="game.js"></script>
+
 </body>
 </html>
